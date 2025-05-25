@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=1170">
+  <title>Invoice Form</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="logo">
+    <img src="claud.png" alt="Cloud Logo">
+  </div>
+<div class="container">
+    <div class="form-area">
+      <h2>Invoice <span style="color:#2563eb">#001</span></h2>
+      <div class="row">
+        <div class="col">
+          <label for="date">Date:</label>
+          <input type="date" id="date">
+        </div>
+        <div class="col">
+          <label for="due-date">Due Date:</label>
+          <input type="date" id="due-date">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <label>Bill From:</label>
+          <input type="email" placeholder="Email">
+          <textarea placeholder="Who is this invoice from?"></textarea>
+        </div>
+        <div class="col">
+          <label>Bill To:</label>
+          <input type="email" placeholder="Email">
+          <textarea placeholder="Who is this invoice to?"></textarea>
+        </div>
+      </div>
+
+      <div class="items">
+        <div class="item-row">
+          <input type="text" placeholder="Item name">
+          <input type="number" value="1" min="1">
+          <input type="text" value="0.00">
+          <input type="text" value="$0.00" disabled>
+        </div>
+        <a href="#">Add item</a>
+      </div>
+
+      <div class="row">
+        <div class="col"></div>
+        <div class="col">
+          <p>Subtotal: $0.00</p>
+          <a href="#">Add discount</a><br>
+          <a href="#">Add tax</a><br>
+          <h3>Total: $0.00</h3>
+        </div>
+      </div>
+
+      <div class="note">
+        <label>Notes:</label>
+        <textarea placeholder="Thanks for your business!"></textarea>
+      </div>
+    </div>
+
+    <div class="sidebar">
+      <div class="actions">
+        <button class="send">✈️ Send Invoice</button>
+        <div class="secondary-buttons">
+          <button>Preview</button>
+          <button>Download</button>
+        </div>
+      </div>
+      <div class="section">
+        <label for="currency">Currency</label>
+        <select id="currency">
+          <option selected>🇺🇸 USD (United States Dollar)</option>
+        </select>
+      </div>
+      <div class="section toggle">
+        <span>Payment method</span>
+        <label class="switch">
+          <input type="checkbox">
+          <span class="slider round"></span>
+        </label>
+      </div>
+      <div class="section toggle">
+        <span>Late fees</span>
+        <label class="switch">
+          <input type="checkbox">
+          <span class="slider round"></span>
+        </label>
+      </div>
+      <div class="section toggle">
+        <span>Notes</span>
+        <label class="switch">
+          <input type="checkbox">
+          <span class="slider round"></span>
+        </label>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
+
